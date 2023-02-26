@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+font-family: 'Poppins', sans-serif;
+box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background: linear-gradient(#FF7A57,#FFD76E);
+    
+
+}
+ 
+ header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+ }
+ header .logo{
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+ }
+ header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ header ul li{
+    list-style:none;
+    margin: 20px;
+
+ }
+ header ul li a{
+    text-decoration: none;
+    padding: 6px 10px;
+    color: #fff;
+    border-radius: 20px;
+ }
+ header ul li a:hover,
+ header ul li a.active{
+    background: #fff;
+    color: #FF7A57;
+ }
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section img#uzay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -11;
+}
+section img#dag{
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    z-index: -10;
+}
+section img#uzay {
+    mix-blend-mode: screen;
+}
+#text{
+    position: absolute;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    transform: rotateY('angle');
+}
+.button{
+    text-decoration: none;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #FF7A57;
+    font-size: 1.5em;
+    z-index: 10;
+    transform: translateY(150px);
+}
