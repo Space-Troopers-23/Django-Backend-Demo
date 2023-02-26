@@ -1,6 +1,6 @@
 from django.views import generic
 from django.shortcuts import render
-from .models import Post
+from .models import Post, TeamMember
 
 def home(request):
     return render(request, 'index.html')
@@ -16,3 +16,7 @@ class PostListIndex(generic.ListView):
 class PostDetail(generic.DetailView):
     model = Post
     template_name = 'post_detail.html'
+
+class TeamMemberList(generic.ListView):
+    queryset = TeamMember.objects.all()
+    template_name = 'team_member.html'
