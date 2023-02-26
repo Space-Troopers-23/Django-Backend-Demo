@@ -24,7 +24,7 @@
             <strong class="post-date">{{post.created_on}}</strong>
             <h3 class="posttitle">{{post.title}}</h3>
             <p class="postinfo">{{post.content|slice:":200"}}</p>
-            <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
+            <a href="/posts/{{post.id}}" class="btn btn-primary">Read More &rarr;</a>
         </div>
         {% endfor %}    
 </body>

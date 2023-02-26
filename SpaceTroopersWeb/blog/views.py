@@ -5,18 +5,26 @@ from .models import Post, TeamMember
 def home(request):
     return render(request, 'index.html')
 
-class PostList(generic.ListView):
-    queryset = Post.objects.filter(status=1).order_by('-created_on')
-    template_name = 'post.html'
+def postList(request):
+    data = {
+        "post_list": Post.objects.filter(status=1).order_by('-created_on')
+    }
+    return render(request, "post.html", data)
 
-class PostListIndex(generic.ListView):
-    queryset = Post.objects.filter(status=1).order_by('-created_on')
-    template_name = 'post_index.html'
+def postListIndex(request):
+    queryset = {
+        "post_list": Post.objects.filter(status=1).order_by('-created_on')
+    }
+    return render(request, "post_index.html", queryset)
 
-class PostDetail(generic.DetailView):
-    model = Post
-    template_name = 'post_detail.html'
+def postDetail(request, id):
+    data = {
+        "post": Post.objects.get(id = id)
+    }
+    return render(request, "post_detail.html",data)
 
-class TeamMemberList(generic.ListView):
-    queryset = TeamMember.objects.all()
-    template_name = 'team_member.html'
+def teamMemberList(request):
+    queryset = {
+        "team_member_list": TeamMember.objects.all()
+    }
+    return render(request ,'team_member.html', queryset)
