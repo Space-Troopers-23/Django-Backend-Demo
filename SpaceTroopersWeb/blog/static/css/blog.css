@@ -8,13 +8,13 @@ box-sizing: border-box;
 }
 body{
     min-height: 100vh;
-    background: linear-gradient(#FF7A57,#FFD76E);
+    background: linear-gradient(#ED4F35,#FFD76E);
     
 
 }
  
  header{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -79,12 +79,12 @@ body{
    
  }
  main .sitebackground::before{
-   content: '';
-   position: absolute;
+   content:'';
+   position:absolute;
    bottom: 0;
    width: 100%;
    height: 80px;
-   background: linear-gradient(to top, #FFA161, transparent );
+   background: linear-gradient(to top, #F4834B, transparent );
    z-index: 100;
    transform: translateY(-148px);
    
@@ -122,3 +122,5 @@ body{
    width: fit-content;
    margin-top: 2rem;
  }
+ 
+ 
