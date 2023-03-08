@@ -36,22 +36,8 @@ VALID_IMAGE_EXTENSIONS = [
 class TeamMember(models.Model):
     name = models.CharField(max_length=100)
     informations = models.TextField()
-    img_url = models.CharField(max_length=150)
+    img_url = models.ImageField(upload_to='team_member_img/')
     subteam = models.IntegerField(choices=SUBTEAM)
-    
-    def save(self):
-        def check_img_type(url):
-            for extension in VALID_IMAGE_EXTENSIONS:
-                print(url[-len(extension)])
-                if(str(url)[-len(extension):] == extension):
-                    return True
-                    print("format accepted")
-            return False
-        
-        response = check_img_type(self.img_url)
-        if(not response):
-            self.img_url = "https://img.freepik.com/free-vector/mars-landscape-background-with-flat-design_23-2147963281.jpg"
-        super(TeamMember,self).save()
     
     class Meta:
         ordering = ['subteam']
