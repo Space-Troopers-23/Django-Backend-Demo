@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our researches & blog</title>
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
+</head>
+<body>
+    {% include  'header.html' %}
+       <main> 
+            <div class="sitebackground"> 
+                <h3 class="sitetitle">Our researches & blog</h3>
+            </div> 
+        </main>
+    <div class="bloglist">
+        {% for post in post_list %}
+        <div class="blogpostcard">
+            <img src="{% static 'images/mars-18087.png' %}" class="postimage" width="200px">
+            <strong class="post-date">{{post.created_on}}</strong>
+            <h3 class="posttitle">{{post.title}}</h3>
+            <p class="postinfo">{{post.content|slice:":200"}}</p>
+            <a href="/posts/{{post.id}}" class="btn btn-primary">Read More &rarr;</a>
+        </div>
+        {% endfor %}    
+</body>
+</html>
