@@ -21,7 +21,7 @@
         {% for team_member in team_member_list %}
         <div class="blogpostcard">
             <div id = 'container'>
-                <img src = "{{team_member.img_url}}"   width="200px" height = "250px"/>
+                <img src = "{{team_member.img_url.url}}"   width="200px" height = "250px"/>
             </div>
             <strong class="post-date">{{post.created_on}}</strong>
             <h3 class="posttitle">{{team_member.name}}</h3>
