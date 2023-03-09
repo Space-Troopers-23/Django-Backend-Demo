@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, TeamMember
+from .models import Post, TeamMember, AboutUs
 
 class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'status','created_on')
@@ -12,4 +12,5 @@ class TeamMemberAdmin(admin.ModelAdmin):
     search_fields = ['subteam']
 
 admin.site.register(Post, PostAdmin)
-admin.site.register(TeamMember, )
+admin.site.register(TeamMember, TeamMemberAdmin)
+admin.site.register(AboutUs)

@@ -47,3 +47,14 @@ class TeamMember(models.Model):
     
     def subteam_str(self):
         return SUBTEAM[self.subteam][1]
+
+class AboutUs(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    img = models.ImageField(upload_to='about_us/')
+
+    class Meta:
+        managed = True
+        
+    def __str__(self):
+        return self.title
