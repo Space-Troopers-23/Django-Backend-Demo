@@ -15,7 +15,7 @@ class Post(models.Model):
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
-
+    img = models.ImageField(upload_to='post_img/')
     class Meta:
         ordering = ['-created_on']
 
@@ -27,21 +27,15 @@ SUBTEAM = (
     (1,"Science"),
 )
 
-VALID_IMAGE_EXTENSIONS = [
-    ".jpg",
-    ".jpeg",
-    ".png",
-]
 
 class TeamMember(models.Model):
     name = models.CharField(max_length=100)
     informations = models.TextField()
-    img_url = models.ImageField(upload_to='team_member_img/')
+    img = models.ImageField(upload_to='team_member_img/')
     subteam = models.IntegerField(choices=SUBTEAM)
-    
+    linkedin_url = models.CharField(max_length=250)
     class Meta:
         ordering = ['subteam']
-
     def __str__(self):
         return self.name
     
@@ -51,10 +45,18 @@ class TeamMember(models.Model):
 class AboutUs(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
-    img = models.ImageField(upload_to='about_us/')
-
+    pub_date = models.DateTimeField('date published')
     class Meta:
         managed = True
         
     def __str__(self):
         return self.title
+
+class AboutUsImage(models.Model):
+    aboutUs = models.ForeignKey(AboutUs, on_delete=models.CASCADE)
+    text = models.CharField(max_length=200)
+    img = models.ImageField(upload_to='about_us/')
+    class Meta:
+        managed = True
+    def __str__(self):
+        return self.text
