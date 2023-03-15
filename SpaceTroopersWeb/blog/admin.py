@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, TeamMember
+from .models import Post, TeamMember, AboutUs, AboutUsImage
 
 class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'status','created_on')
@@ -7,9 +7,23 @@ class PostAdmin(admin.ModelAdmin):
     search_fields = ['title', 'content']
 
 class TeamMemberAdmin(admin.ModelAdmin):
-    list_display = ('name', 'informations', 'img_url','subteam')
+    list_display = ('name', 'informations', 'img','subteam', 'linkedin_url')
     list_filter = ("subteam",)
     search_fields = ['subteam']
 
+class AboutUsImageInline(admin.TabularInline):
+    model = AboutUsImage
+    extra = 2
+
+class AboutUsAdmin(admin.ModelAdmin):
+    fieldsets = [
+        (None,               {'fields': ['title' ]}),
+        ('Content',               {'fields': ['content']}),
+        ('Date information', {'fields': ['pub_date']}),
+    ]
+    list_display = ('title','pub_date')
+    inlines = [AboutUsImageInline]
+
 admin.site.register(Post, PostAdmin)
-admin.site.register(TeamMember, )
+admin.site.register(TeamMember, TeamMemberAdmin)
+admin.site.register(AboutUs, AboutUsAdmin)

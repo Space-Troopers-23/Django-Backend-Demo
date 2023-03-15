@@ -1,6 +1,6 @@
 from django.views import generic
 from django.shortcuts import render
-from .models import Post, TeamMember
+from .models import Post, TeamMember, AboutUs
 
 def home(request):
     return render(request, 'index.html')
@@ -28,3 +28,9 @@ def teamMemberList(request):
         "team_member_list": TeamMember.objects.all()
     }
     return render(request ,'team_member.html', queryset)
+
+def aboutUs(request):
+    queryset = {
+        'about_us': AboutUs.objects.get(id = 1)
+    }
+    return render(request, 'about_us.html', queryset)
