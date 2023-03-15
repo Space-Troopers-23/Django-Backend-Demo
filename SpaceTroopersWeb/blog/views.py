@@ -32,6 +32,7 @@ def teamMemberList(request):
 
 def aboutUs(request):
     queryset = {
-        'about_us': AboutUs.objects.get(id = 1)
+        'about_us': AboutUs.objects.get(id = 1),
+        'images': AboutUs.objects.get(id = 1).aboutusimage_set.all()
     }
     return render(request, 'about_us.html', queryset)

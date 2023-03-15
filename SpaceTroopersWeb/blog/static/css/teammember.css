@@ -1,73 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-* {
-   margin: 0;
-   padding: 0;
-   font-family: 'Poppins', sans-serif;
-   box-sizing: border-box;
+*{
+margin: 0;
+padding: 0;
+font-family: 'Poppins', sans-serif;
+box-sizing: border-box;
 }
-
-body {
-   min-height: 500vh;
-   background: linear-gradient(#8A2219, #F1AD4A);
-   display: flex;
-   justify-content: center;
-   align-items: center;
+body{
+    min-height: 500vh;
+    background: linear-gradient(#8A2219,#F1AD4A);
+    display: flex;
+    justify-content: center;
+    align-items: center;
    flex-wrap: wrap;
 }
+ 
+ header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+ }
+ header .logo{
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+ }
+ header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ header ul li{
+    list-style:none;
+    margin: 20px;
 
-header {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   padding: 30px 100px;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   z-index: 10000;
-}
-
-header .logo {
-   font-weight: 700;
-   color: #fff;
-   text-decoration: none;
-   font-size: 2em;
-   text-transform: uppercase;
-   letter-spacing: 2px;
-}
-
-header ul {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-
-header ul li {
-   list-style: none;
-   margin: 20px;
-
-}
-
-header ul li a {
-   text-decoration: none;
-   padding: 6px 10px;
-   color: #fff;
-   border-radius: 20px;
-}
-
-header ul li a:hover,
-header ul li a.active {
-   background: #fff;
-   color: #8A2219;
-}
-
-section {
+ }
+ header ul li a{
+    text-decoration: none;
+    padding: 6px 10px;
+    color: #fff;
+    border-radius: 20px;
+ }
+ header ul li a:hover,
+ header ul li a.active{
+    background: #fff;
+    color: #8A2219;
+ }
+section{
    position: relative;
-   transform: translateY(-1200px);
+   transform: translateY(-1000px);
 }
-
-section h2 {
+section h2{
    color: #fff;
    font-size: 24px;
    letter-spacing: 2px;
@@ -75,28 +67,25 @@ section h2 {
    text-align: center;
    justify-content: center;
 }
-
-section::before {
+section::before{
    content: '';
    position: absolute;
    top: 0;
    left: 0;
    width: 100%;
    height: 100%;
-
+   
 }
-
-.container {
+.container{
    position: relative;
    z-index: 1;
    display: flex;
    justify-content: center;
-   align-items: center;
+   align-items:center ;
    flex-wrap: wrap;
    margin: 40px 0;
 }
-
-.container .card {
+.container .card{
    position: relative;
    width: 300px;
    height: 400px;
@@ -109,8 +98,7 @@ section::before {
    align-items: center;
 
 }
-
-.container .card .content {
+.container .card .content{
    position: relative;
    display: flex;
    justify-content: center;
@@ -118,8 +106,7 @@ section::before {
    flex-direction: column;
 
 }
-
-.container .card .content .imgBx {
+.container .card .content .imgBx{
    position: relative;
    width: 150px;
    height: 150px;
@@ -127,8 +114,7 @@ section::before {
    overflow: hidden;
    border: 10px solid rgba(0, 0, 0, 0.25);
 }
-
-.container .card .content .imgBx a img {
+.container .card .content .imgBx a img{
    position: absolute;
    top: 0;
    left: 0;
@@ -136,8 +122,7 @@ section::before {
    height: 100%;
    object-fit: cover;
 }
-
-.container .card .content .contentBx h3 {
+.container .card .content .contentBx h3{
    color: #fff;
    text-transform: uppercase;
    letter-spacing: 2px;
@@ -148,20 +133,17 @@ section::before {
    line-height: 1.1em;
 
 }
-
-.container .sci {
+.container .sci{
    position: absolute;
    bottom: 100px;
    display: flex;
    transform: translateY(50px);
-
+   
 }
-
-.container .sci li {
+.container .sci li{
    list-style: none;
 }
-
-.container .sci li a {
-   color: #fff;
+.container .sci li a{
+   color:#fff ;
    font-size: 24px;
 }
