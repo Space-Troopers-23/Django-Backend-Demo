@@ -7,7 +7,7 @@ class PostAdmin(admin.ModelAdmin):
     search_fields = ['title', 'content']
 
 class TeamMemberAdmin(admin.ModelAdmin):
-    list_display = ('name', 'informations', 'img','subteam', 'linkedin_url')
+    list_display = ('name','subteam', 'linkedin_url')
     list_filter = ("subteam",)
     search_fields = ['subteam']
 

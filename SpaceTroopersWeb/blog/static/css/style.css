@@ -51,7 +51,7 @@ body{
  header ul li a:hover,
  header ul li a.active{
     background: #fff;
-    color: #FF7A57;
+    color: #8A2219;
  }
 section{
     position: relative;
@@ -95,7 +95,7 @@ section img#uzay {
     padding: 8px 30px;
     border-radius: 40px;
     background: #fff;
-    color: #FF7A57;
+    color: #8A2219;
     font-size: 1.5em;
     z-index: 10;
     transform: translateY(150px);

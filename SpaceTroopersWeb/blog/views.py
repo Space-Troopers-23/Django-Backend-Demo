@@ -25,8 +25,9 @@ def postDetail(request, id):
 
 def teamMemberList(request):
     queryset = {
-        "team_member_list": TeamMember.objects.all()
+        "team_member_list": TeamMember.objects.all,
     }
+    print(queryset)
     return render(request ,'team_member.html', queryset)
 
 def aboutUs(request):
