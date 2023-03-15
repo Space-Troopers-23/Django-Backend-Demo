@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+import re
 
 
 STATUS = (
@@ -25,12 +26,19 @@ SUBTEAM = (
     (0,"Software"),
     (1,"Science"),
 )
+
+VALID_IMAGE_EXTENSIONS = [
+    ".jpg",
+    ".jpeg",
+    ".png",
+]
+
 class TeamMember(models.Model):
     name = models.CharField(max_length=100)
     informations = models.TextField()
-    img_url = models.CharField(max_length=150)
+    img_url = models.ImageField(upload_to='team_member_img/')
     subteam = models.IntegerField(choices=SUBTEAM)
-
+    
     class Meta:
         ordering = ['subteam']
 
