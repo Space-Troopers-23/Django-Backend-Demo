@@ -13,8 +13,11 @@
     {% include  'header.html' %}
       <main class="post-detail-container"> 
         <img src="{{post.img.url}}" class="post-detail-image"alt="">
-            <h1>{{post.title}}</h1>
-            <p>{{post.content|linebreaks}}</p>
+        <h1>{{post.title}}</h1>
+        <br><br> <br>
+        <strong class="post-date">{{post.created_on}}</strong> <br>
+        <i class="post-writer">{{post.author}}</i>
+        <p>{{post.content|linebreaks}}</p>
       </main>
 </body>
 </html>
