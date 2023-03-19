@@ -1,7 +1,27 @@
-<h3>{{about_us.title}}</h3>
-<p>{{about_us.content}}</p>
-{% for image in  images %}
-    
-<img src = "{{image.img.url}}" width = '1000px'/>
-<p>{{image.text}}</p>
-{% endfor %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'css/aboutus.css' %}">
+</head>
+<body>
+    {% include 'header.html' %}
+    <section class="about">
+        <div class="content">
+            {% for image in images %}
+            <img src="{{image.img.url}}" alt="">
+            {% endfor %}
+            <div class="text"> <br>
+            <br> <br> <h1>{{about_us.title}}</h1>
+                <p>{{about_us.content|linebreaks}}</p>
+            </div>
+        </div>
+    </section>
+    {% include 'footer.html' %}
+</body>
+</html>
