@@ -64,7 +64,7 @@ header ul li a.active {
 
 section {
    position: absolute;
-   transform: translateY(-800px);
+   transform: translateY(-600px);
 }
 
 section h2 {
