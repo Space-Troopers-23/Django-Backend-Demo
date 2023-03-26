@@ -16,8 +16,7 @@
     <section>
         <h2>Mentors</h2>
         <div class="container">
-        {% for team_member in team_member_list %}
-        {% if team_member.subteam == 2 %}
+        {% for team_member in team_member_mentors_list %}
         <div class="card">
             <div class="content">
                 <div class="imgBx">    
@@ -35,13 +34,11 @@
                 </li>
             </ul>
         </div>
-        {% endif %}
         {% endfor %}    
         </div>
         <h2>Software Team</h2>
         <div class="container">
-        {% for team_member in team_member_list %}
-        {% if team_member.subteam == 0 %}
+        {% for team_member in team_member_software_list %}
         <div class="card">
             <div class="content">
                 <div class="imgBx">    
@@ -59,13 +56,11 @@
                 </li>
             </ul>
         </div>
-        {% endif %}
         {% endfor %}    
         </div>
         <h2>Science Team</h2>
         <div class="container">
-        {% for team_member in team_member_list %}
-        {% if team_member.subteam == 1 %}
+        {% for team_member in team_member_science_list %}
         <div class="card">
             <div class="content">
                 <div class="imgBx">    
@@ -83,7 +78,6 @@
                 </li>
             </ul>
         </div>
-        {% endif %}
         {% endfor %}    
         </div>
     </section>

@@ -1,0 +1,14 @@
+/migrations/.py
+*.xml
+*.iml
+*.sqlite3
+# Ignore compiled Python files
+pycache/
+# Ignore .pyc files
+*.pyc
+# Ignore .pyo files
+*.pyo
+# Ignore temporary files
+.~
+*~
+db.sqlite3
