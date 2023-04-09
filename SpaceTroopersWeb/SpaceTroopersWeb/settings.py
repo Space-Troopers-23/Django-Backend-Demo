@@ -28,9 +28,11 @@ SECRET_KEY = 'django-insecure-dl!e5%locs4%)8tz+r465@8^dpf+&6ne)t6h9ncy%iq4jam1vn
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    '*',
     '127.0.0.1',
     '13.53.234.235',
     'spacetroopers.space',
+    'www.spacetroopers.space',
 ]
 
 
