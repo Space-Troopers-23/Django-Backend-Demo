@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ANASAYFA.css' %}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,16 +12,17 @@
 </head>
 <body>
     {% include  'header.html' %}
-    
-    <section>
-        <img src="{% static 'images/arkaplan.png' %}" id="uzay" width="1490px">
-        <img src="{% static 'images/yenii4.png' %}" id="dag" alt="">
-        <img src="{% static 'images/sadecedagg.png' %}" id="dagg" alt="">
-        <img src="{% static 'images/star_dust_on_8925355.png' %}" id="stars"  alt="">
-        <h2 id="text">Space Troopers</h2>
+    <div class="container">
+        <p class="letter letter-S">Space Tr</p>
+        <div class="moon">
+        </div> <div class="moon2"></div>
+        <p class="letter letter-P">pers</p>
+        
+    </div>
+    <section> 
         <a href="https://roverchallenge.eu/en/main-page/" target="_blank" class="button">About ERC</a>
     </section>
-    
+        
     {% include 'footer.html' %}
 </body>
 </html>

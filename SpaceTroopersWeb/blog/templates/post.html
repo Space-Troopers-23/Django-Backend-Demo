@@ -20,7 +20,7 @@
     <div class="bloglist">
         {% for post in post_list %}
         <div class="blogpostcard">
-            <img src="{% static 'images/mars-18087.png' %}" class="postimage" width="200px">
+            <img src="{% static 'images/moon.jpg' %}" class="postimage" width="200px">
             <strong class="post-date">{{post.created_on}}</strong>
             <h3 class="posttitle">{{post.title}}</h3>
             <p class="postinfo">{{post.content|slice:":200"}}</p>
