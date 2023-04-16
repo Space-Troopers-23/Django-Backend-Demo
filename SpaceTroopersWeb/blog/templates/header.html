@@ -1,14 +1,39 @@
 {% load static %}
 
 <header>
-    <a href="/" class="logo">
-        <img src="{% static 'images/logobeyaz.png' %}" height="70px" alt="">
-    </a>
-         <ul>
-             <li> <a href="/" class="active">Home</a></li>
-             <li> <a href="/about-us">About Us</a></li>
-             <li> <a href="#">Sponsors</a></li>
-             <li> <a href="/team-members">Team Members</a></li>
-             <li> <a href="/post">Our Researches & Blog</a></li>
-         </ul>
- </header>
+    <div class="navbar">
+        <div class="logo"><img src="{% static 'images/logobeyaz.png' %}" height="70px" alt=""></a></div>
+        <ul class="links">
+            <li> <a href="/">Home</a></li>
+            <li> <a href="/about-us">About Us</a></li>
+            <li> <a href="#">Sponsors</a></li>
+            <li> <a href="/team-members">Team Members</a></li>
+            <li> <a href="/post">Our Researches & Blog</a></li>
+        </ul>
+        <!--<li><a href="/loginpage" class="action_btn">Log In</a></li> -->
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+    <div class="dropdown_menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about-us">About Us</a></li>
+        <li><a href="#">Sponsors</a></li>
+        <li><a href="/team-members">Team Members</a></li>
+        <li><a href="/post">Our Blog</a></li>
+        <!--<li><a href="/loginpage" class="action_btn">Log In</a></li> -->
+    </div>
+
+    <script> 
+        const toggleBtn = document.querySelector(".toggle_btn")
+        const toggleBtnIcon = document.querySelector(".toggle_btn i")
+        const dropDownMenu = document.querySelector(".dropdown_menu")
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle("open")
+            const isOpen = dropDownMenu.classList.contains("open")
+            toggleBtnIcon.classList = isOpen 
+                ? "fa-solid fa-xmark" 
+                : "fa-solid fa-bars";
+        }
+    </script> 
+</header>
