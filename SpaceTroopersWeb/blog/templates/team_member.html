@@ -14,6 +14,7 @@
 <body>
     {% include  'header.html' %}
     <section>
+    {% if team_member_mentors_list %}
         <h2>Mentors</h2>
         <div class="container">
         {% for team_member in team_member_mentors_list %}
@@ -36,6 +37,8 @@
         </div>
         {% endfor %}    
         </div>
+        {% endif %}
+        {% if team_member_software_list %}
         <h2>Software Team</h2>
         <div class="container">
         {% for team_member in team_member_software_list %}
@@ -58,6 +61,8 @@
         </div>
         {% endfor %}    
         </div>
+        {% endif %}
+        {% if  team_member_science_list %}
         <h2>Science Team</h2>
         <div class="container">
         {% for team_member in team_member_science_list %}
@@ -80,6 +85,31 @@
         </div>
         {% endfor %}    
         </div>
+        {% endif %}
+        {% if  team_member_organization_list %}
+        <h2>Organization Team</h2>
+        <div class="container">
+        {% for team_member in team_member_organization_list %}
+        <div class="card">
+            <div class="content">
+                <div class="imgBx">    
+                    <a href="#">
+                        <img src="{{team_member.img.url}}" alt="">
+                    </a>
+                </div>
+                <div class="contentBx">
+                    <h3>{{team_member.name}}</h3>
+                </div>
+            </div>
+            <ul class="sci">
+                <li>
+                    <a href="{{team_member.linkedin_url}}"> <i class="fa-brands fa-linkedin"></i> </a>
+                </li>
+            </ul>
+        </div>
+        {% endfor %}    
+        </div>
+        {% endif %}
     </section>
 </body>
 </html>
