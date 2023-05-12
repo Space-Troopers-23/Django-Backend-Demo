@@ -23,17 +23,12 @@
         <li><a href="/post">Our Blog</a></li>
         <!--<li><a href="/loginpage" class="action_btn">Log In</a></li> -->
     </div>
-
-    <script> 
-        const toggleBtn = document.querySelector(".toggle_btn")
-        const toggleBtnIcon = document.querySelector(".toggle_btn i")
-        const dropDownMenu = document.querySelector(".dropdown_menu")
-        toggleBtn.onclick = function () {
-            dropDownMenu.classList.toggle("open")
-            const isOpen = dropDownMenu.classList.contains("open")
-            toggleBtnIcon.classList = isOpen 
-                ? "fa-solid fa-xmark" 
-                : "fa-solid fa-bars";
-        }
-    </script> 
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+    const dropdownMenu = document.querySelector('.dropdown_menu');
+    
+    toggleBtn.addEventListener('click', () => { 
+        dropdownMenu.classList.toggle('open');
+    });
+    </script>
 </header>

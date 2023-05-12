@@ -13,138 +13,138 @@ body{
 }
 
 
-li{
-  list-style:none;
-}
-
-a{
-  text-decoration:none;
-  color:white;
-}
-
-a:hover{
-  color:#2b1055;
-  background-color: #fff;
-  padding:0.5rem 1rem;
-  border:none;
-  outline:none;
-  border-radius:20px;
-  
-}
-
-header{
-  position:absolute;
-  
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 30px 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 10000;
- 
-  
-}
-
-.navbar{
-  display:flex;
-  width:100%;
-  height:60px;
-  max-width:1200px;
-  margin:0 auto;
-  align-items:center;
-  justify-content:space-between;
-  
-}
-
-.navbar .logo a{
-  font-size:1.5rem;
-  font-weight:bold;
-}
-
-.navbar .links{
-  display:flex;
-  gap:2rem;
-}
-
-.navbar .toggle_btn{
-  color:#fff;
-  cursor:pointer;
-  display:none;
-  font-size:1.5rem;
-}
-
-.action_btn{
-  background-color:#fff;
-  padding:0.5rem 1rem;
-  border:none;
-  outline:none;
-  border-radius:20px;
-  font-size:1rem;
-  font-weight:bold;
-  color: #040823;
-}
-
-.action_btn:hover{
-  color:#fff;
-  scale:1.05;
-  background-color: #2766B6;
-}
-.action_btn:active{
-  scale:0.95;
-}
-
-.dropdown_menu{
-  display:none;
-  right:2rem;
-  position:absolute;
-  background:grey;
-  backdrop-filter:blur(15px);
-  top:60px;
-  height:0px;
-  width:300px;
-  border-radius:10px;
-  overflow:hidden;
-  transition: .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.dropdown_menu li{
-  padding:0.7rem;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-.dropdown_menu.open{
-  height:240px
-}
-
-.dropdown_menu .action_btn{
-  width:100%;
-  display:flex;
-  justify-content:center;
-}
-
-@media(max-width:992px){
-  .navbar .links,
-  .navbar .action_btn{
-    display:none;
+ header li{
+    list-style:none;
   }
+  
+  header a{
+    text-decoration:none;
+    color:white;
+  }
+  
+  header a:hover{
+    color:#141733;
+    background-color: #fff;
+    padding:0.5rem 1rem;
+    border:none;
+    outline:none;
+    border-radius:20px;
+    
+  }
+  header{
+    position:absolute;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+   
+    
+  }
+  
+  .navbar{
+    display:flex;
+    width:100%;
+    height:60px;
+    max-width:1200px;
+    margin:0 auto;
+    align-items:center;
+    justify-content:space-between;
+    
+  }
+  
+  .navbar .logo a{
+    font-size:1.5rem;
+    font-weight:bold;
+  }
+  
+  .navbar .links{
+    display:flex;
+    gap:2rem;
+  }
+  
   .navbar .toggle_btn{
-    display:block;
+    color:#fff;
+    cursor:pointer;
+    display:none;
+    font-size:1.5rem;
   }
+  
+  .action_btn{
+    background-color:#fff;
+    padding:0.5rem 1rem;
+    border:none;
+    outline:none;
+    border-radius:20px;
+    font-size:1rem;
+    font-weight:bold;
+    color: #141733;
+  }
+  
+  .action_btn:hover{
+    color:#fff;
+    scale:1.05;
+    background-color: #4d89d7;
+  }
+  .action_btn:active{
+    scale:0.95;
+  }
+  
   .dropdown_menu{
-    display:block;
+    display:none;
+    right:2rem;
+    position:absolute;
+    background:grey;
+    backdrop-filter:blur(15px);
+    top:60px;
+    height:0px;
+    width:300px;
+    border-radius:10px;
+    overflow:hidden;
+    transition: .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
-}
-
-@media(max-width:576px){
-  .dropdown_menu{
-    left:2rem;
-    width:unset;
+  
+  .dropdown_menu li{
+    padding:0.7rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
   }
-}
-/*header bitiş*/
+  .dropdown_menu.open{
+    height:340px
+  }
+  
+  .dropdown_menu .action_btn{
+    width:100%;
+    display:flex;
+    justify-content:center;
+  }
+  
+  @media(max-width:992px){
+    .navbar .links,
+    .navbar .action_btn{
+      display:none;
+    }
+    .navbar .toggle_btn{
+      display:block;
+    }
+    .dropdown_menu{
+      display:block;
+    }
+  }
+  
+  @media(max-width:576px){
+    .dropdown_menu{
+      left:2rem;
+      width:unset;
+    }
+  }
+  
+  /*header bitiş*/
 
 
 
