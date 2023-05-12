@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 body{
-    min-height: 100vh;
+    min-height: 200vh;
     background: linear-gradient(#141733,#3c3e6b);
     /*background: linear-gradient(#040823,#2766B6);*/
     
@@ -14,16 +14,16 @@ body{
   }
   
   
-  li{
+  header li{
     list-style:none;
   }
   
-  a{
+  header a{
     text-decoration:none;
     color:white;
   }
   
-  a:hover{
+  header a:hover{
     color:#141733;
     background-color: #fff;
     padding:0.5rem 1rem;
@@ -117,7 +117,7 @@ body{
     align-items:center;
   }
   .dropdown_menu.open{
-    height:240px
+    height:340px
   }
   
   .dropdown_menu .action_btn{
@@ -145,6 +145,7 @@ body{
       width:unset;
     }
   }
+  
   /*header bitiş*/
  .about{
     width: 100%;
@@ -172,6 +173,7 @@ body{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+    margin-top: 150px;
  }
  .text h1{
     color: #4d89d7;
@@ -179,6 +181,8 @@ body{
     margin-bottom: 20px;
     text-transform: capitalize;
     transform: translateX(30px);
+    margin-top: 200px;
+    
  }
  .text h5{
     color: #fff;
@@ -193,6 +197,7 @@ body{
     line-height: 28px;
     letter-spacing: 1px;
     margin-bottom: 45px;
+    
  }
  @media  screen and (max-width: 1180px) {
     .about{
@@ -219,6 +224,7 @@ footer{
   text-align: center;
   background-color: #141733;
   color: #fff;
+  transform: translateY(500px);
 }
 footer li{
   display: inline-block;
@@ -236,4 +242,5 @@ footer h4{
   background-color: #141733;
   color: #fff;
   text-align: center;
+  transform: translateY(500px);
 }

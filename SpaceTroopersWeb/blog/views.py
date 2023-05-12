@@ -25,10 +25,12 @@ def postDetail(request, id):
 
 def teamMemberList(request):
     queryset = {
+        "team_member_organization_list": TeamMember.objects.filter(subteam=3),
         "team_member_mentors_list": TeamMember.objects.filter(subteam=2),
         "team_member_science_list": TeamMember.objects.filter(subteam=1),
         "team_member_software_list": TeamMember.objects.filter(subteam=0),
     }
+    print(queryset);
     return render(request ,'team_member.html', queryset)
 
 def aboutUs(request):
